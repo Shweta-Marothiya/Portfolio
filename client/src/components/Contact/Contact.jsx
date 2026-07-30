@@ -20,7 +20,7 @@ function Contact() {
 
         try {
             const res = await axios.post(
-                "http://localhost:5000/api/contact",
+                "https://portfolio-flmi.onrender.com/api/contact",
                 formData
             );
 
@@ -67,59 +67,62 @@ function Contact() {
                 >
                     <form onSubmit={handleSubmit} className="space-y-6">
 
-                        {/* Name */}
-                        <div>
-                            <label className="block mb-2 text-gray-300">
-                                Name
-                            </label>
+    {/* Name */}
+    <div>
+        <label className="block mb-2 text-gray-300">
+            Name
+        </label>
 
-                            <input
-                                type="text"
-                                name="name"
-                                value={formData.name}
-                                onChange={handleChange}
-                                placeholder="Enter your name"
-                                className="..."
-                            />
-                        </div>
+        <input
+            type="text"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            placeholder="Enter your name"
+            className="w-full px-4 py-3 rounded-lg bg-slate-900 border border-cyan-500/30 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400"
+        />
+    </div>
 
-                        {/* Email */}
-                        <div>
-                            <label className="block mb-2 text-gray-300">
-                                Email
-                            </label>
+    {/* Email */}
+    <div>
+        <label className="block mb-2 text-gray-300">
+            Email
+        </label>
 
-                            <input
-                                type="email"
-                                name="email"
-                                value={formData.email}
-                                onChange={handleChange}
-                                placeholder="Enter your email"
-                                className="..."
-                            />
-                        </div>
+        <input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            placeholder="Enter your email"
+            className="w-full px-4 py-3 rounded-lg bg-slate-900 border border-cyan-500/30 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400"
+        />
+    </div>
 
-                        {/* Message */}
-                        <div>
-                            <label className="block mb-2 text-gray-300">
-                                Message
-                            </label>
+    {/* Message */}
+    <div>
+        <label className="block mb-2 text-gray-300">
+            Message
+        </label>
 
-                            <textarea
-                                rows="6"
-                                name="message"
-                                value={formData.message}
-                                onChange={handleChange}
-                                placeholder="Write your message..."
-                                className="..."
-                            ></textarea>
-                        </div>
+        <textarea
+            rows="6"
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            placeholder="Write your message..."
+            className="w-full px-4 py-3 rounded-lg bg-slate-900 border border-cyan-500/30 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 resize-none"
+        ></textarea>
+    </div>
 
-                        <button type="submit">
-                            Send Message
-                        </button>
+    <button
+        type="submit"
+        className="w-full py-3 rounded-lg bg-cyan-500 text-black font-semibold hover:bg-cyan-400 transition duration-300 shadow-[0_0_20px_#06b6d4]"
+    >
+        Send Message
+    </button>
 
-                    </form>
+</form>
                 </div>
 
             </div>
